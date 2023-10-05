@@ -1,0 +1,14 @@
+Source Table,Source Column Names,Mapping Logic,Target Table ,Target Field names,Target DataType,Description
+cdw_sapp_custmer.json,SSN,Direct Move,CDW_SAPP_CUSTOMER,SSN,INT,Social Security Number of the customer (National ID)
+cdw_sapp_custmer.json,FIRST_NAME,Convert the Name to Title Case,CDW_SAPP_CUSTOMER,FIRST_NAME,VARCHAR,First Name of the Customer
+cdw_sapp_custmer.json,MIDDLE_NAME,Convert the middle name in lower case,CDW_SAPP_CUSTOMER,MIDDLE_NAME,VARCHAR,Middle Name of the customer
+cdw_sapp_custmer.json,LAST_NAME,Convert the Last Name in Title Case,CDW_SAPP_CUSTOMER,LAST_NAME,VARCHAR,Last Name of the customer
+cdw_sapp_custmer.json,CREDIT_CARD_NO,Direct_move,CDW_SAPP_CUSTOMER,Credit_card_no,VARCHAR,Credit card number of customer
+cdw_sapp_custmer.json,"STREET_NAME,APT_NO","Concatenate Apartment no and Street name of customer's Residence with comma as a seperator (Street, Apartment)",CDW_SAPP_CUSTOMER,FULL_STREET_ADDRESS,VARCHAR,Apartment no and Street name of customer's Residence
+cdw_sapp_custmer.json,CUST_CITY,Direct Move,CDW_SAPP_CUSTOMER,CUST_CITY,VARCHAR,Customer’s Current City
+cdw_sapp_custmer.json,CUST_STATE,Direct Move,CDW_SAPP_CUSTOMER,CUST_STATE,VARCHAR,Customer’s State code
+cdw_sapp_custmer.json,CUST_COUNTRY,Direct move,CDW_SAPP_CUSTOMER,CUST_COUNTRY,VARCHAR,Customer’s country code
+cdw_sapp_custmer.json,CUST_ZIP,Direct move,CDW_SAPP_CUSTOMER,CUST_ZIP,INT,Zip code of Customer's Country
+cdw_sapp_custmer.json,CUST_PHONE,Change the format of phone number to (XXX)XXX-XXXX,CDW_SAPP_CUSTOMER,CUST_PHONE,VARCHAR,Contact Number of the customer
+cdw_sapp_custmer.json,CUST_EMAIL,Direct move,CDW_SAPP_CUSTOMER,CUST_EMAIL,VARCHAR,Email address of the customer
+cdw_sapp_custmer.json,LAST_UPDATED,Direct move,CDW_SAPP_CUSTOMER,LAST_UPDATED,TIMESTAMP,Record inserted / modification date.
