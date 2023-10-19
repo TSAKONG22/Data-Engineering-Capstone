@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-# Data-Engineering-Capstone
-Capstone project for Data Engineering Program with Per Scholas
-=======
->>>>>>> Stashed changes
 # Data-Engineering-Capstone Project
 # Tae Sakong
 
@@ -59,13 +52,23 @@ Capstone project for Data Engineering Program with Per Scholas
 ### Data
 
 A. Credit Card Dataset
-
+    a) CDW_SAPP_CUSTOMER.JSON: This file has the existing customer details.
+    b) CDW_SAPP_CREDITCARD.JSON: This file contains all credit card transaction information.
+    c) CDW_ 
 B. Loan Application Dataset
+    https://raw.githubusercontent.com/platformps/LoanDataset/main/loan_data.json
 
-
-## Project Details
-
-Directory Structure
+    Fields:
+    - Application_ID
+    - Gender
+    - Married
+    - Dependents
+    - Education
+    - Self_Employed
+    - Credit_History
+    - Property_Area
+    - Income
+    - Application_Status
 
 ## Technical Challenges
 1. Loading JSON data for credit card database
@@ -74,8 +77,10 @@ Directory Structure
 2. Data transformation for CUST_PHONE
     - Issue: Attempted to use format customer phone number column using date_format function. The date_format function is usually used for formatting date and timestampe columns, not for phone numbers. Given that CUST_PHONE is of type BIGINT, it throws an error.
     - Solution: Use format_string function to format CUST_PHONE. Assuming, CUST_PHONE column always contains 10-digit numbers
-2.
-3.
-4.
-5.
+3. Transaction Customer Details Module
+    - Issue: the nature of possible modifications wasn't specified
+    - Solution: allow modification of all customer account details, without limiting possible entries
+4. Data Analysis and Visualization
+    - Issue: for plots with string text_label, was unable to rotate the x-tick labels for better readability
+    - Solution: create an "as" object for respective plot and pass in "rotation" parameter
 
