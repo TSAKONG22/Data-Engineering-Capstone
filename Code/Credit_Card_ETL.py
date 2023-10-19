@@ -1,6 +1,6 @@
 # Import modules 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, concat_ws,initcap, lower, format_string, coalesce, lit
+from pyspark.sql.functions import col, concat_ws,initcap, lower, format_string, coalesce, lit, cast
 from pyspark.sql.types import StringType
 
 # Inititlize spark session
