@@ -86,12 +86,19 @@ branch_transformed_df.write.jdbc(
 # Load credit card data and apply transformations
 credit_card_df = spark.read.json(r"C:\Data-Engineering-Capstone\Data\cdw_sapp_credit.json")
 credit_card_transformed_df = credit_card_df.select(
+    # Direct move
     col("CREDIT_CARD_NO").cast(StringType()).alias("CUST_CC_NO"),
+    # Convert Dat, Month, and Year into a TIMEID (YYYYMMDD) using concat_ws
     concat_ws("", col("YEAR"), col("MONTH"), col("DAY")).cast(StringType()).alias("TIMEID"),
+    # Direct move
     col("CUST_SSN").cast("int").alias("CUST_SSN"),
+    # Direct move
     col("BRANCH_CODE").cast("int").alias("BRANCH_CODE"),
+    # Direct move
     col("TRANSACTION_TYPE").cast(StringType()).alias("TRANSACTION_TYPE"),
+    # Direct move
     col("TRANSACTION_VALUE").cast("double").alias("TRANSACTION_VALUE"),
+    # Direct move
     col("TRANSACTION_ID").cast("int").alias("TRANSACTION_ID")
 )
 
