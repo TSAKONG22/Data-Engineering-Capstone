@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+# Data-Engineering-Capstone
+Capstone project for Data Engineering Program with Per Scholas
+=======
+>>>>>>> Stashed changes
 # Data-Engineering-Capstone Project
 # Tae Sakong
 
@@ -61,8 +68,14 @@ B. Loan Application Dataset
 Directory Structure
 
 ## Technical Challenges
-1.
+1. Loading JSON data for credit card database
+    - Issue: unable to extract json data
+    - Solution: specified full filepath to json data C:\\Data-Engineering-Captsone\Data\[JSON FILE]
+2. Data transformation for CUST_PHONE
+    - Issue: Attempted to use format customer phone number column using date_format function. The date_format function is usually used for formatting date and timestampe columns, not for phone numbers. Given that CUST_PHONE is of type BIGINT, it throws an error.
+    - Solution: Use format_string function to format CUST_PHONE. Assuming, CUST_PHONE column always contains 10-digit numbers
 2.
 3.
 4.
 5.
+
